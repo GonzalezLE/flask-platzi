@@ -6,9 +6,9 @@ from flask import Flask,request,make_response,redirect,render_template
 app = Flask(__name__)
 
 todos : List  = [
-    'TODO 1',
-    'TODO 2',
-    'TODO 3'
+    'Comprar cafe',
+    'Enviar solicitud de compra',
+    'Entregar video a productor'
     ]
 
 @app.route('/')
