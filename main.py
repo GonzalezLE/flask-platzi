@@ -1,9 +1,10 @@
 from typing import List,Dict
 from flask import Flask,request,make_response,redirect,render_template
-
+from flask_bootstrap import Bootstrap
 
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 todos : List  = [
     'Comprar cafe',
@@ -27,7 +28,7 @@ def index():
     response = make_response(redirect('/hello'))
     response.set_cookie('user_ip',user_ip)
     
-    # return response
+    return response
     
 
 @app.route('/hello')
