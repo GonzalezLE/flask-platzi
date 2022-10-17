@@ -1,20 +1,14 @@
-{% extends 'base.html' %}
-{% import 'macros.html' as macros %}
+login.html
+
+class{% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf %}
-
 {% block title %}
-    {{super()}}
-   Login
+    {{ super() }}
+    404
 {% endblock %}
-
 
 {% block content %}
-
     <div class="container">
-        <form action="{{ url_for('hello') }}" method="post">            
-            {{ wtf.quick_form(login_form) }}
-        </form>
+        {{ wtf.quick_form(login_form) }}
     </div>
 {% endblock %}
-
-
