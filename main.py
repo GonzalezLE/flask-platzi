@@ -9,6 +9,7 @@ from flask import (
     url_for,flash
     )
 
+from app.firestore_service import get_users,get_todos
 
 from app import create_app
 from app.forms import LoginForm
@@ -49,9 +50,11 @@ def hello():
     user_ip = session.get('user_ip')
     
     username = session.get('username')
+    
+    dd = get_todos(username)
     context:Dict ={
         'user_ip':user_ip,
-        'todos':todos,        
+        'todos':dd,
         'username':username
     }
     

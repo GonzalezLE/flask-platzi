@@ -24,7 +24,7 @@
    
     <ul>
         {% for todo in todos %}
-            {{macros.render_todo(todo)}}
+            <li>{{todo.to_dict().descripcion}}</li>
         {% endfor %}
     </ul>
 {% endblock %}
